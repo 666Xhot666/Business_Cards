@@ -9,10 +9,10 @@ const port = process.env.PORT || 3000
 app.use(cors(), express.json())
 app.use('/api', router)
 
-// app.use('/', express.static(path.join(__dirname, '../', 'client')))
-// app.get('*', (req, res) => {
-//   res.sendFile(path.resolve(__dirname, '../', 'client', 'index.html'))
-// })
+app.use('/', express.static(path.join(__dirname, '../', 'client')))
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../', 'client', 'index.html'))
+})
 
 app
   .listen(port, () => {
