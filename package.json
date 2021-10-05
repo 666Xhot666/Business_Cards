@@ -1,0 +1,27 @@
+{
+  "name": "business_cards",
+  "version": "1.0.0",
+  "description": "Koroka Solutions candidate evaluation task",
+  "main": "src/app.js",
+  "scripts": {
+    "dev": "nodemon src/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/666Xhot666/Business_Cards.git"
+  },
+  "author": "Gladkiy Konstantin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/666Xhot666/Business_Cards/issues"
+  },
+  "homepage": "https://github.com/666Xhot666/Business_Cards#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
+  }
+}
