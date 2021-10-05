@@ -1,20 +1,8 @@
-const { get } = require('https')
-const getUsers = (page) => {
-  return new Promise((resolve, reject) => {
-    try {
-      get(`${process.env.USERS_API}?page=${page}`, (response) => {
-        let data = ''
-        response.on('data', (chunk) => (data += chunk))
-        response.on('end', () => resolve({ ...JSON.parse(data) }))
-      })
-    } catch (error) {
-      reject(error)
-    }
-  })
-}
+const getUsersService = require('../services/getUsersService')
+
 const downloadCSVController = (req, res) => {
   try {
-    Promise.all([getUsers(1), getUsers(2)]).then((data) => {
+    Promise.all([getUsersService(1), getUsersService(2)]).then((data) => {
       const users = []
       const headers = ['first_name, last_name, email']
       data.map((obj) => obj.data.map((user) => users.push(user)))
