@@ -152,20 +152,6 @@ footer {
   outline: none;
   display: none;
 }
-.downloadCSV {
-  position: fixed;
-  z-index: 999;
-  bottom: 40px;
-  left: 40px;
-  width: 90px;
-  height: 40px;
-  background-color: #48dbfbcc;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-  color: rgb(248, 225, 225);
-  outline: none;
-}
 
 @media screen and (max-width: 980px) {
   .card-item {
